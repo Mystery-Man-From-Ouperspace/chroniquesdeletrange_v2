@@ -1,0 +1,88 @@
+<form class="flexcol {{cssClass}}" autocomplete="off">
+    {{log 'spell-sheet' this}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="{{ localize 'CDE.Name' }}" />
+            </h1>
+            <div>
+                <!-- <label><b>{{localize "CDE.Reference"}}</b></label> -->
+                <input class="input" type="text" placeholder="{{ localize 'CDE.Reference' }}" name="system.reference" value="{{systemData.reference}}" />
+            </div>
+        </div>
+    </header>
+	
+	{{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">{{localize "CDE.Description"}}</a>
+        <a class="item" data-tab="data">{{localize "CDE.Data"}}</a>
+        <a class="item" data-tab="components">{{localize "CDE.Components"}}</a>
+        <a class="item" data-tab="effects">{{localize "CDE.Effects"}}</a>
+        <a class="item" data-tab="examples">{{localize "CDE.Examples"}}</a>
+        <a class="item" data-tab="notes">{{localize "CDE.Notes"}}</a>
+    </nav>
+	
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Description Tab --}}
+        <div class="tab" data-group="primary" data-tab="description">
+            {{editor spellDescriptionHTML target="system.description" button=true editable=editable engine="prosemirror"}}
+        </div>
+
+        {{!-- Data Tab --}}
+        <div class="tab" data-group="primary" data-tab="data">
+		    <div class="specialityname">
+				<label><b>{{ localize "CDE.SpecialityName" }}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.SpecialityName' }}" name="system.specialityname" value="{{systemData.specialityname}}"/>
+			</div>
+		
+            <div class="associatedelement">
+                <label><b>{{localize "CDE.AssociatedElement"}}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.AssociatedElement' }}" name="system.associatedelement" value="{{systemData.associatedelement}}"/>
+			</div>
+
+		    <div class="hei">
+				<label><b>{{ localize "CDE.Hei" }}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.Hei' }}" name="system.hei" value="{{systemData.hei}}"/>
+			</div>
+
+		    <div class="realizationtimeritual">
+                <label><b>{{localize "CDE.RealizationTimeRitual"}}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.RealizationTimeRitual' }}" name="system.realizationtimeritual" value="{{systemData.realizationtimeritual}}"/>
+			</div>
+			
+		    <div class="realizationtimeaccelerated">
+			<label><b>{{ localize "CDE.RealizationTimeAccelerated" }}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.RealizationTimeAccelerated' }}" name="system.realizationtimeaccelerated" value="{{systemData.realizationtimeaccelerated}}"/>
+			</div>
+		
+            <div class="flashback">
+                <label><b>{{localize "CDE.Flashback"}}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.Flashback' }}" name="system.flashback" value="{{systemData.flashback}}"/>
+			</div>           
+        </div>
+		
+        {{!-- Components Tab --}}
+        <div class="tab" data-group="primary" data-tab="components">
+            {{editor componentsDescriptionHTML target="system.components" button=true editable=editable engine="prosemirror"}}
+        </div>
+
+		{{!-- Effects Tab --}}
+        <div class="tab" data-group="primary" data-tab="effects">
+            {{editor effectsDescriptionHTML target="system.effects" button=true editable=editable engine="prosemirror"}}
+        </div>
+
+		{{!-- Examples Tab --}}
+        <div class="tab" data-group="primary" data-tab="examples">
+            {{editor examplesDescriptionHTML target="system.examples" button=true editable=editable engine="prosemirror"}}
+        </div>
+
+		{{!-- Notes Tab --}}
+        <div class="tab" data-group="primary" data-tab="notes">
+            {{editor notesHTML target="system.notes" button=true editable=editable engine="prosemirror"}}
+        </div>        
+
+    </section>
+</form>

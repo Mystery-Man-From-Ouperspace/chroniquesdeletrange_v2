@@ -1,0 +1,142 @@
+{
+  "id": "chroniquesdeletrange",
+  "version": "0.1.1",
+  "title": "Les Chroniques de l'Étrange",
+  "url": "https://chroniques-etrange-no.fr/download/foundry/",
+  "description": "Game system for Les Chroniques de l'Étrange.",
+  "license": "LICENSE.txt",
+  "authors": [
+    {
+      "name": "Man From Outerspace",
+      "url": "https://chroniques-etrange-no.fr"
+    }
+  ],
+  "esmodules": ["module/chroniquesdeletrange.js"],
+  "styles": ["css/chroniquesdeletrange.css"],
+    "packs": [
+    {
+      "name": "aides-pour-les-joueuses",
+      "label": "FR - Aides pour les Joueuses",
+      "system": "chroniquesdeletrange",
+      "path": "packs/aides-pour-les-joueuses",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "capacites-surnaturelles",
+      "label": "FR - Capacités surnaturelles",
+      "system": "chroniquesdeletrange",
+      "path": "packs/capacites-surnaturelles",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "des-exemples-de-sanhei",
+      "label": "FR - Des exemples de Sanhei",
+      "system": "chroniquesdeletrange",
+      "path": "packs/des-exemples-de-sanhei",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fat-si-pre-tires",
+      "label": "FR - Fat si pré-tirés",
+      "system": "chroniquesdeletrange",
+      "path": "packs/fat-si-pre-tires",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "les-arts-martiaux",
+      "label": "FR - Les Arts martiaux",
+      "system": "chroniquesdeletrange",
+      "path": "packs/les-arts-martiaux",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "les-sortileges",
+      "label": "FR - Les Sortilèges",
+      "system": "chroniquesdeletrange",
+      "path": "packs/les-sortileges",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "scenes-clefs",
+      "label": "FR - Scènes clefs",
+      "system": "chroniquesdeletrange",
+      "path": "packs/scenes-clefs",
+      "type": "Scene",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "musiques-mathieu-verdier",
+      "label": "Musiques Mathieu Verdier",
+      "system": "chroniquesdeletrange",
+      "path": "packs/musiques-mathieu-verdier",
+      "type": "Playlist",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+	  {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    }
+  ],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "background": "/systems/chroniquesdeletrange/images/background/accueil.jpg",
+  "gridDistance": 5,
+  "gridUnits": "m",
+  "primaryTokenAttribute": "heiyang",
+  "secondaryTokenAttribute": "heiyin",
+  "manifest": "https://chroniques-etrange-no.fr/download/foundry/system.json",
+  "download": "https://chroniques-etrange-no.fr/download/foundry/release-011.zip"
+}

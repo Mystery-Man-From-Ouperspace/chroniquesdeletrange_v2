@@ -1,0 +1,71 @@
+<form class="flexcol {{cssClass}}" autocomplete="off">
+    {{log 'item-sheet' this}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" />
+        <div class="header-fields">
+            <h1 class="charname">
+                <input name="name" type="text" value="{{item.name}}" placeholder="Name" />
+            </h1>
+            <label><b>{{localize "CDE.TypeOfItem"}}</b></label>
+            <div class="resource">
+                <select name="system.subtype">
+                    {{selectOptions subtypes selected=systemData.subtype labelAttr="label"}}
+                </select>
+            </div>
+            <div class="resource">
+				<label><b>{{localize "CDE.Reference"}}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.Reference' }}" name="system.reference" value="{{systemData.reference}}" />
+            </div>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="description">{{localize "CDE.Description"}}</a>
+        <a class="item" data-tab="attributes">{{localize "CDE.Attributes"}}</a>
+        <a class="item" data-tab="notes">{{localize "CDE.Notes"}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Description Tab --}}
+        <div class="tab" data-group="primary" data-tab="description">
+            {{editor descriptionHTML target="system.description" button=true editable=editable engine="prosemirror"}}
+        </div>
+
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+			<div class="quantity">
+				<label><b>{{localize "CDE.Quantity"}}</b></label>
+				<input class="input" type="number" name="system.quantity" value="{{systemData.quantity}}" />
+			</div>
+			<div class="weight">
+				<label><b>{{localize "CDE.Weight"}}</b></label>
+				<input class="input" type="number" name="system.weight" value="{{systemData.weight}}" />
+			</div>
+            {{#if isArmor}}
+			<div class="protection">
+				<label><b>{{localize "CDE.Protection"}}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.Protection' }}" name="system.protection" value="{{systemData.protection}}" />
+			</div>
+            {{/if}}
+            {{#if isWeapon}}
+			<div class="damage">
+				<label><b>{{localize "CDE.Damage"}}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.Damage' }}" name="system.damage" value="{{systemData.damage}}" />
+			</div>
+			<div class="range">
+				<label><b>{{localize "CDE.Range"}}</b></label>
+				<input class="input" type="text" placeholder="{{ localize 'CDE.Range' }}" name="system.range" value="{{systemData.range}}" />
+			</div>
+            {{/if}}            
+        </div>
+
+		{{!-- Notes Tab --}}
+        <div class="tab" data-group="primary" data-tab="notes">
+            {{editor notesHTML target="system.notes" button=true editable=editable engine="prosemirror"}}
+        </div>
+
+    </section>
+</form>
