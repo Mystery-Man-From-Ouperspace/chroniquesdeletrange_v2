@@ -662,7 +662,7 @@ export class CDECharacterSheet extends CDEActorSheet {
     switch ( myAspectUsed ) {                       // On fabrique le message de retour du lancer de dés
       case wood:
         d_successes = (parseInt(d10_4) + parseInt(d10_9));
-        d_auspicious = (parseInt(d10_2) + parseInt(d10_7));
+        d_auspicious = (parseInt(d10_2) + parseInt(d10_7) + parseInt(bonusAuspicious));
         d_noxious = (parseInt(d10_1) + parseInt(d10_6));
         d_loksyu = (parseInt(d10_0) + parseInt(d10_5));
         rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_0 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_5 + ")]";
@@ -692,7 +692,7 @@ export class CDECharacterSheet extends CDEActorSheet {
         // Results: 3 ㊍ Wood Successes, 2 ㊋ Fire Beneficial-Dice, 0 ㊌ Water Noxious-Dice --- Loksyu : ㊏ Earth 0 ● Yin, 1 ○ Yang --- Tin Ji : 1 ㊎ Metal [4,9,4,5,2,8,7]
       case fire:
         d_successes = (parseInt(d10_2) + parseInt(d10_7));
-        d_auspicious = (parseInt(d10_0) + parseInt(d10_5));
+        d_auspicious = (parseInt(d10_0) + parseInt(d10_5) + parseInt(bonusAuspicious));
         d_noxious = (parseInt(d10_4) + parseInt(d10_9));
         d_loksyu = (parseInt(d10_8) + parseInt(d10_3));
         rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_8 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_3 + ")]";
@@ -722,7 +722,7 @@ export class CDECharacterSheet extends CDEActorSheet {
         // Results: 0 ㊋ Fire Successes, 4 ㊏ Earth Beneficial-Dice, 0 ㊍ Wood Noxious-Dice --- Loksyu : ㊎ Metal 1 ● Yin, 1 ○ Yang --- Tin Ji : 1 ㊌ Water [10,3,8,5,5,5,1]
       case earth:
         d_successes = (parseInt(d10_0) + parseInt(d10_5));
-        d_auspicious = (parseInt(d10_3) + parseInt(d10_8));
+        d_auspicious = (parseInt(d10_3) + parseInt(d10_8) + parseInt(bonusAuspicious));
         d_noxious = (parseInt(d10_2) + parseInt(d10_7));
         d_loksyu = (parseInt(d10_6) + parseInt(d10_1));
         rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_6 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_1 + ")]";
@@ -752,7 +752,7 @@ export class CDECharacterSheet extends CDEActorSheet {
         // Results: 2 ㊏ Earth Successes, 0 ㊎ Metal Beneficial-Dice, 0 ㊋ Fire Noxious-Dice --- Loksyu : ㊌ Water 2 ● Yin, 1 ○ Yang --- Tin Ji : 2 ㊍ Wood [6,4,9,6,1,10,5]
       case metal:
         d_successes = (parseInt(d10_3) + parseInt(d10_8));
-        d_auspicious = (parseInt(d10_1) + parseInt(d10_6));
+        d_auspicious = (parseInt(d10_1) + parseInt(d10_6) + parseInt(bonusAuspicious));
         d_noxious = (parseInt(d10_0) + parseInt(d10_5));
         d_loksyu = (parseInt(d10_4) + parseInt(d10_9));
         rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_4 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_9 + ")]";
@@ -783,7 +783,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       case water:
         console.log("C'est l'Eau !");
         d_successes = (parseInt(d10_1) + parseInt(d10_6));
-        d_auspicious = (parseInt(d10_4) + parseInt(d10_9));
+        d_auspicious = (parseInt(d10_4) + parseInt(d10_9) + parseInt(bonusAuspicious));
         d_noxious = (parseInt(d10_3) + parseInt(d10_8));
         d_loksyu = (parseInt(d10_2) + parseInt(d10_7));
         rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_2 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_7 + ")]";
