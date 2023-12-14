@@ -294,7 +294,20 @@
   "CDE.TinJiName": "Nombre de la Tin Ji",
   "CDE.TinJi2": "Tin Ji",
 
+  "CDE.UpperCaseSuccesses": "ÉXITOS",
+  "CDE.UpperCaseAuspiciousDice": "DADOS-BUENOS",
+  "CDE.UpperCaseNoxiousDice": "DADOS-DAÑINOS",
+  "CDE.UpperCaseLoksyu": "LOKSYU",
+  "CDE.UpperCaseTinJi": "TIN JI",
   
+  "CDE.UpperCaseMetal": "METAL",
+  "CDE.UpperCaseWater": "AGUA",
+  "CDE.UpperCaseEarth": "TIERRA",
+  "CDE.UpperCaseFire": "FUEGO",
+  "CDE.UpperCaseWood": "MADERA",
+
+
+
   "TYPES": {
     "Actor": {
       "character": "Fat si",

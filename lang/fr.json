@@ -296,6 +296,18 @@
   "CDE.TinJiName": "Nom de la Tin Ji",
   "CDE.TinJi2": "Tin Ji",
 
+  "CDE.UpperCaseSuccesses": "SUCCÈS",
+  "CDE.UpperCaseAuspiciousDice": "DÉS-FASTES",
+  "CDE.UpperCaseNoxiousDice": "DÉS-NÉFASTES",
+  "CDE.UpperCaseLoksyu": "LOKSYU",
+  "CDE.UpperCaseTinJi": "TIN JI",
+
+  "CDE.UpperCaseMetal": "METAL",
+  "CDE.UpperCaseWater": "EAU",
+  "CDE.UpperCaseEarth": "TERRE",
+  "CDE.UpperCaseFire": "FEU",
+  "CDE.UpperCaseWood": "BOIS",
+
 
 
   "TYPES": {

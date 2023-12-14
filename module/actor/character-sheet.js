@@ -651,9 +651,23 @@ export class CDECharacterSheet extends CDEActorSheet {
     console.log(water);
     console.log(metal);
 
+    let  d_successes = 0;
+    let d_auspicious = 0;
+    let d_noxious = 0;
+    let d_loksyu = 0;
+    let rep_loksyu = "";
+    let d_tinji = 0;
+
         
     switch ( myAspectUsed ) {                       // On fabrique le message de retour du lancer de dés
       case wood:
+        d_successes = (parseInt(d10_4) + parseInt(d10_9));
+        d_auspicious = (parseInt(d10_2) + parseInt(d10_7));
+        d_noxious = (parseInt(d10_1) + parseInt(d10_6));
+        d_loksyu = (parseInt(d10_0) + parseInt(d10_5));
+        rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_0 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_5 + ")]";
+        d_tinji = (parseInt(d10_3) + parseInt(d10_8));
+    
         console.log("C'est le Bois !");
         message += (parseInt(d10_4) + parseInt(d10_9)) + " ";
         message += game.i18n.localize("CDE.Wood");
@@ -677,6 +691,13 @@ export class CDECharacterSheet extends CDEActorSheet {
         break;
         // Results: 3 ㊍ Wood Successes, 2 ㊋ Fire Beneficial-Dice, 0 ㊌ Water Noxious-Dice --- Loksyu : ㊏ Earth 0 ● Yin, 1 ○ Yang --- Tin Ji : 1 ㊎ Metal [4,9,4,5,2,8,7]
       case fire:
+        d_successes = (parseInt(d10_2) + parseInt(d10_7));
+        d_auspicious = (parseInt(d10_0) + parseInt(d10_5));
+        d_noxious = (parseInt(d10_4) + parseInt(d10_9));
+        d_loksyu = (parseInt(d10_8) + parseInt(d10_3));
+        rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_8 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_3 + ")]";
+        d_tinji = (parseInt(d10_1) + parseInt(d10_6));
+    
         console.log("C'est le Feu !");
         message += (parseInt(d10_2) + parseInt(d10_7)) + " ";
         message += game.i18n.localize("CDE.Fire");
@@ -700,6 +721,13 @@ export class CDECharacterSheet extends CDEActorSheet {
         break;
         // Results: 0 ㊋ Fire Successes, 4 ㊏ Earth Beneficial-Dice, 0 ㊍ Wood Noxious-Dice --- Loksyu : ㊎ Metal 1 ● Yin, 1 ○ Yang --- Tin Ji : 1 ㊌ Water [10,3,8,5,5,5,1]
       case earth:
+        d_successes = (parseInt(d10_0) + parseInt(d10_5));
+        d_auspicious = (parseInt(d10_3) + parseInt(d10_8));
+        d_noxious = (parseInt(d10_2) + parseInt(d10_7));
+        d_loksyu = (parseInt(d10_6) + parseInt(d10_1));
+        rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_6 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_1 + ")]";
+        d_tinji = (parseInt(d10_4) + parseInt(d10_9));
+    
         console.log("C'est la Terre !");
         message += (parseInt(d10_0) + parseInt(d10_5)) + " ";
         message += game.i18n.localize("CDE.Earth");
@@ -723,6 +751,13 @@ export class CDECharacterSheet extends CDEActorSheet {
         break;
         // Results: 2 ㊏ Earth Successes, 0 ㊎ Metal Beneficial-Dice, 0 ㊋ Fire Noxious-Dice --- Loksyu : ㊌ Water 2 ● Yin, 1 ○ Yang --- Tin Ji : 2 ㊍ Wood [6,4,9,6,1,10,5]
       case metal:
+        d_successes = (parseInt(d10_3) + parseInt(d10_8));
+        d_auspicious = (parseInt(d10_1) + parseInt(d10_6));
+        d_noxious = (parseInt(d10_0) + parseInt(d10_5));
+        d_loksyu = (parseInt(d10_4) + parseInt(d10_9));
+        rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_4 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_9 + ")]";
+        d_tinji = (parseInt(d10_2) + parseInt(d10_7));
+    
         console.log("C'est le Métal !");
         message += (parseInt(d10_3) + parseInt(d10_8)) + " ";
         message += game.i18n.localize("CDE.Metal");
@@ -747,6 +782,13 @@ export class CDECharacterSheet extends CDEActorSheet {
         // Results: 1 ㊎ Metal Successes, 0 ㊌ Water Beneficial-Dice, 1 ㊏ Earth Noxious-Dice --- Loksyu : ㊍ Wood 2 ● Yin, 2 ○ Yang --- Tin Ji : 1 ㊋ Fire [9,9,5,4,2,4,3]
       case water:
         console.log("C'est l'Eau !");
+        d_successes = (parseInt(d10_1) + parseInt(d10_6));
+        d_auspicious = (parseInt(d10_4) + parseInt(d10_9));
+        d_noxious = (parseInt(d10_3) + parseInt(d10_8));
+        d_loksyu = (parseInt(d10_2) + parseInt(d10_7));
+        rep_loksyu = "[" + game.i18n.localize("CDE.Yin") + "(" + d10_2 + ") " + game.i18n.localize("CDE.Yang") + "(" + d10_7 + ")]";
+        d_tinji = (parseInt(d10_0) + parseInt(d10_5));
+    
         message += (parseInt(d10_1) + parseInt(d10_6)) + " ";
         message += game.i18n.localize("CDE.Water");
         message += game.i18n.localize("CDE.Successes") + ", ";
@@ -862,6 +904,78 @@ export class CDECharacterSheet extends CDEActorSheet {
       }  else {
         title += "| ";
       }
+    };
+
+
+
+    // Smart Message
+    const smartTemplate = 'systems/chroniquesdeletrange/templates/form/dice-result.html';
+    const smartTitle = '';
+    const smartData = {
+      title : smartTitle,
+      aspect : aspectLibel[myAspectUsed],
+      successesdice : d_successes,
+      auspiciousdice : d_auspicious,
+      noxiousdice : d_noxious,
+      loksyudice : d_loksyu,
+      loksyurepartition : rep_loksyu,
+      tinjidice : d_tinji,
+      d1 : d10_1,
+      d2 : d10_2,
+      d3 : d10_3,
+      d4 : d10_4,
+      d5 : d10_5,
+      d6 : d10_6,
+      d7 : d10_7,
+      d8 : d10_8,
+      d9 : d10_9,
+      d0 : d10_0,
+    }
+    console.log("smartData avant retour func = ", smartData);
+    const smartHtml = await renderTemplate(smartTemplate, smartData);
+  
+    switch ( typeOfThrow ) {
+      case 0:
+        ChatMessage.create({
+          user: game.user.id,
+          // speaker: ChatMessage.getSpeaker({ token: this.actor }),
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          content: smartHtml,
+          rollMode: 'roll'                          // Public Roll
+        });
+
+      break;
+      case 1:
+        ChatMessage.create({
+          user: game.user.id,
+          // speaker: ChatMessage.getSpeaker({ token: this.actor }),
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          content:smartHtml,
+          rollMode: 'gmroll'                        // Private Roll
+        });
+
+      break;
+      case 2:
+        ChatMessage.create({
+          user: game.user.id,
+          // speaker: ChatMessage.getSpeaker({ token: this.actor }),
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          content: smartHtml,
+          rollMode: 'blindroll'                       // Blind GM Roll
+        });
+
+      break;
+      case 3:
+        ChatMessage.create({
+          user: game.user.id,
+          // speaker: ChatMessage.getSpeaker({ token: this.actor }),
+          speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+          content: smartHtml,
+          rollMode: 'selfroll'                        // Self Roll
+        });
+
+      break;
+      default: console.log("C'est bizarre !");
     };
 
 

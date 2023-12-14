@@ -294,6 +294,19 @@
   "CDE.TinJiName": "Tin Ji Name",
   "CDE.TinJi2": "Tin Ji",
 
+  "CDE.UpperCaseSuccesses": "SUCCESSES",
+  "CDE.UpperCaseAuspiciousDice": "AUSPICIOUS-DICE",
+  "CDE.UpperCaseNoxiousDice": "NOXIOUS-DICE",
+  "CDE.UpperCaseLoksyu": "LOKSYU",
+  "CDE.UpperCaseTinJi": "TIN JI",
+
+  "CDE.UpperCaseMetal": "METAL",
+  "CDE.UpperCaseWater": "WATER",
+  "CDE.UpperCaseEarth": "EARTH",
+  "CDE.UpperCaseFire": "FIRE",
+  "CDE.UpperCaseWood": "WOOD",
+
+
 
   "TYPES": {
     "Actor": {
