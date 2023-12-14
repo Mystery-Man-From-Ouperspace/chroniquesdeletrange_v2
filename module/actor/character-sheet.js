@@ -910,9 +910,7 @@ export class CDECharacterSheet extends CDEActorSheet {
 
     // Smart Message
     const smartTemplate = 'systems/chroniquesdeletrange/templates/form/dice-result.html';
-    const smartTitle = '';
     const smartData = {
-      title : smartTitle,
       aspect : aspectLibel[myAspectUsed],
       successesdice : d_successes,
       auspiciousdice : d_auspicious,
