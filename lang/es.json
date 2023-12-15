@@ -79,7 +79,7 @@
 
   "CDE.InternalCinnabar": "Cinabrio Interno",
   "CDE.Alchemy": "Alquimia",
-  "CDE.MasteryOfTheWay": "Dominio des Camino",
+  "CDE.MasteryOfTheWay": "Dominio del Camino",
   "CDE.Exorcism": "Exorcismo",
   "CDE.Geomancy": "Geomancia",
 
@@ -306,6 +306,8 @@
   "CDE.UpperCaseFire": "FUEGO",
   "CDE.UpperCaseWood": "MADERA",
 
+
+  "CDE.Visible": "Especialidades visibles",
 
 
   "TYPES": {

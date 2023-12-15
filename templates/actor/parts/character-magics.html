@@ -74,8 +74,19 @@
 {{#each systemData.magics as |magic key|}}
     {{log 'magic' key magic}}
     <table class="{{getMagicBackground key}}">
-    <tr class="clickondie">
-        <td class="click" data-libel-id="{{key}}-magic">
+    <tr>
+      <td class="check visible">
+        <input
+        type="checkbox"
+        name="system.magics.{{key}}.visible"
+        {{
+        checked
+        magic.visible
+        }}
+        title="{{ localize 'CDE.Visible' }}"
+        />
+    </td>
+    <td class="click" data-libel-id="{{key}}-magic">
         <img
             id="system.magics.{{@key}}.click"
             src="systems/chroniquesdeletrange/images/d10-10.png"
@@ -91,6 +102,7 @@
         </td>
         <td class="label"><b>&nbsp;&nbsp;,&nbsp;{{ getMagicAspectLabel key }}</b></td>
         <td>
+        {{#if magic.visible}}
         <table>
             {{#each magic.speciality as |special key2|}}
             {{log 'speciality' special key key2}}
@@ -120,6 +132,7 @@
             </tr>
             {{/each}}
         </table>
+        {{/if}}
         </td>
     </tr>
     </table>
