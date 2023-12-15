@@ -1,0 +1,15 @@
+<ol class="item-list">
+  {{#each supernaturals as |item id|}}
+  <li class="item flexrow" data-item-id="{{item._id}}">
+    <img src="{{item.img}}" title="{{item.name}}" width="24" height="24" />
+    <h4 class="item-name">{{item.name}}</h4>
+    <div class="item-controls">
+      <a class="item-control" title="{{ localize 'CDE.SupernaturalEdit' }}" data-action="edit"><i class="fas fa-edit"></i></a>
+      <a class="item-control" title="{{ localize 'CDE.SupernaturalDelete' }}" data-action="delete"><i class="fas fa-trash"></i></a>
+    </div>
+  </li>
+  {{/each}}
+</ol>
+<p>
+  <a class="item-control" title="{{ localize 'CDE.SupernaturalCreate' }}" data-action="create" data-type="supernatural"><i class="fas fa-plus"></i> {{ localize "CDE.SupernaturalCreate" }}</a>
+</p>

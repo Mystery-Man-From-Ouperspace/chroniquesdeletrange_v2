@@ -9,8 +9,8 @@ export class CDEPNJSheet extends CDEActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["chroniquesdeletrange", "sheet", "actor", "npc"],
       template: "systems/chroniquesdeletrange/templates/actor/npc-sheet.html",
-      scrollY: [".description", ".aptitudes", ".supernaturals"],
-      dragDrop: [{dragSelector: ".supernatural", dropSelector: null}]
+      scrollY: [".description", ".aptitudes", ".supernaturals", ".spells", ".kungfus", ".items"],
+      dragDrop: [{dragSelector: ".item-list .item .spell .kungfu .supernatural", dropSelector: null}]
     });
   }
 
@@ -24,7 +24,10 @@ export class CDEPNJSheet extends CDEActorSheet {
       async: true
     });
     context.supernaturals = context.items.filter(item => item.type === "supernatural");
-    return context;
+    context.spells = context.items.filter(item => item.type === "spell");
+    context.kungfus = context.items.filter(item => item.type === "kungfu");
+    context.equipments = context.items.filter(item => item.type === "item");
+  return context;
   }
 
   /* -------------------------------------------- */
@@ -42,23 +45,38 @@ export class CDEPNJSheet extends CDEActorSheet {
    * @param event
    * @private
    */
+
+  /*
   _onSupernaturalControl(event) {
     event.preventDefault();
-
+  */
+ 
+  _onItemControl(event) {
+    event.preventDefault();
+      
     // Obtain event data
     const button = event.currentTarget;
-    const li = button.closest(".supernatural");
-    const item = this.actor.items.get(li?.dataset.supernaturalId);
+    const action = button.dataset.action;
+    const type = button.dataset.type;
+    const li = button.closest(".item");
+    let item;
 
     // Handle different actions
-    switch ( button.dataset.action ) {
+    switch (action) {
       case "create":
         const cls = getDocumentClass("Item");
-        return cls.create({name: game.i18n.localize("CDE.SupernaturalNew"), type: "supernatural"}, {parent: this.actor});
+        let name = "";
+        if (type === "item") name = game.i18n.localize("CDE.ItemNew");
+        else if (type === "kungfu") name = game.i18n.localize("CDE.KFNew");
+        else if (type === "spell") name = game.i18n.localize("CDE.SpellNew");
+        else if (type === "supernatural") name = game.i18n.localize("CDE.SupernaturalNew");
+        return cls.create({ name: name, type: type }, { parent: this.actor });
       case "edit":
+        item = this.actor.items.get(li?.dataset.itemId);
         return item.sheet.render(true);
       case "delete":
-        return item.delete(); 
+        item = this.actor.items.get(li?.dataset.itemId);
+        return item.delete();
     }
   }
 

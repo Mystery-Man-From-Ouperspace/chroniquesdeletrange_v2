@@ -13,7 +13,13 @@ export const preloadHandlebarsTemplates = async function() {
     "systems/chroniquesdeletrange/templates/actor/parts/character-treasures.html",
     "systems/chroniquesdeletrange/templates/actor/parts/character-items.html",
     "systems/chroniquesdeletrange/templates/actor/parts/character-kungfus.html",
-    "systems/chroniquesdeletrange/templates/actor/parts/character-spells.html"
+    "systems/chroniquesdeletrange/templates/actor/parts/character-spells.html",
+
+    "systems/chroniquesdeletrange/templates/actor/parts/npc-supernaturals.html",
+    "systems/chroniquesdeletrange/templates/actor/parts/npc-spells.html",
+    "systems/chroniquesdeletrange/templates/actor/parts/npc-kungfus.html",
+    "systems/chroniquesdeletrange/templates/actor/parts/npc-items.html"
+
   ];
 
   // Load the template parts

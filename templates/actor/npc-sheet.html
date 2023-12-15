@@ -71,7 +71,10 @@
     <a class="item" data-tab="description">{{ localize "CDE.Description" }}</a>
     <a class="item" data-tab="aptitudes">{{ localize "CDE.Aptitudes" }}</a>
     <a class="item" data-tab="supernaturals">{{ localize "CDE.SuperNatural" }}</a>
-  </nav>
+    <a class="item" data-tab="spells">{{ localize "CDE.Spells" }}</a>
+    <a class="item" data-tab="kungfus">{{ localize "CDE.KungFu" }}</a>
+    <a class="item" data-tab="items">{{ localize "CDE.Items" }}</a>
+</nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
@@ -211,23 +214,18 @@
       </div>
     </div>
 
-    {{!-- SuperNatural Tab --}}
-    <div class="tab supernaturals" data-group="primary" data-tab="supernaturals">
-      <ol class="item-list">
-        {{#each supernaturals as |supernatural id|}}
-        <li class="item flexrow" data-item-id="{{supernatural._id}}">
-          <img src="{{supernatural.img}}" title="{{supernatural.name}}" width="24" height="24" />
-          <h4 class="item-name">{{supernatural.name}}</h4>
-          <div class="item-controls">
-            <a class="item-control" title="{{ localize 'CDE.SupernaturalEdit' }}" data-action="edit"><i class="fas fa-edit"></i></a>
-            <a class="item-control" title="{{ localize 'CDE.SupernaturalDelete' }}" data-action="delete"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
-        {{/each}}
-      </ol>
-      <p>
-        <a class="item-control" title="{{ localize 'CDE.SupernaturalCreate' }}" data-action="create" data-type="supernatural"><i class="fas fa-plus"></i> {{ localize "CDE.SupernaturalCreate" }}</a>
-      </p>
-    </div>
+
+    {{!-- Spells Tab --}}
+      <div class="tab spells" data-group="primary" data-tab="spells">{{> "systems/chroniquesdeletrange/templates/actor/parts/npc-spells.html"}}</div>
+
+    {{!-- KungFus Tab --}}
+      <div class="tab kungfus" data-group="primary" data-tab="kungfus">{{> "systems/chroniquesdeletrange/templates/actor/parts/npc-kungfus.html"}}</div>
+
+    {{!-- Items Tab --}}
+      <div class="tab items" data-group="primary" data-tab="items">{{> "systems/chroniquesdeletrange/templates/actor/parts/npc-items.html"}}</div>
+
+    {{!-- SuperNaturals Tab --}}
+      <div class="tab supernaturals" data-group="primary" data-tab="supernaturals">{{> "systems/chroniquesdeletrange/templates/actor/parts/npc-supernaturals.html"}}</div>
+
   </section>
 </form>
