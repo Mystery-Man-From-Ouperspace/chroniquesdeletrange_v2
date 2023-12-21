@@ -13,7 +13,7 @@
   ],
   "esmodules": ["module/chroniquesdeletrange.js"],
   "styles": ["css/chroniquesdeletrange.css"],
-    "packs": [
+  "packs": [
     {
       "name": "aides-pour-les-joueuses",
       "label": "FR - Aides pour les Joueuses",
