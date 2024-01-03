@@ -26,9 +26,6 @@
   background-position: top right; 
 }
 
-
-
-
 /*.chroniquesdeletrange .sheet-header .logo-img {
   max-height : 100%;
   width : auto;
@@ -49,8 +46,6 @@
   height: 100%;
   margin: 0;
 }  */
-
-
 
 .chroniquesdeletrange .sheet-display {
   display: flex;
@@ -85,11 +80,25 @@
   margin: 0;
 }
 
+.chroniquesdeletrange .concept {
+  text-align: center;
+}
+
+.chroniquesdeletrange .concept input {
+  height: 28px;
+  text-align: center;
+}
+.chroniquesdeletrange .concept select {
+  text-align: center;
+}
+
 .chroniquesdeletrange .body-sheet {
   width: 710px;
 }
 
-
+.chroniquesdeletrange.sheet.actor.character .sheet-body {
+  overflow-y: auto;
+}
 
 .chroniquesdeletrange .tabs {
   flex: 0 0 40px;
@@ -100,10 +109,6 @@
   background-position: top right; 
 }
 
-
-
-
-
 .chroniquesdeletrange .tabs .item {
   line-height: 40px;
   font-weight: bold;
@@ -113,20 +118,19 @@
   text-shadow: none;
 }
 
-
 /*
 .chroniquesdeletrange .sheet-body {
   overflow: hidden;
 } */
+
 .chroniquesdeletrange .sheet-body .tab {
   height: 100%;
   height: 900px;
   padding: 2px;
-  
+  /* overflow-y: auto; */
   background-image: url("/systems/chroniquesdeletrange/images/fond_de_page.png");
   background-position: bottom left; 
 }
-
 
 .chroniquesdeletrange .sheet-body .click:hover {
   cursor: pointer;
@@ -136,7 +140,6 @@
 .chroniquesdeletrange .sheet-body .click2:hover {
   cursor: pointer;
 }
-
 
 .chroniquesdeletrange .sheet-body img {
 border: 0px;
@@ -318,21 +321,6 @@ text-align: left;
   margin-left: -22px;
 }
 
-
-.chroniquesdeletrange .concept {
-  text-align: center;
-}
-
-.chroniquesdeletrange .concept input {
-  height: 28px;
-  text-align: center;
-}
-.chroniquesdeletrange .concept select {
-  text-align: center;
-}
-
-
-
 .chroniquesdeletrange .nghangpart1 {
   margin-top: -65px;
   margin-left: 267px;
@@ -422,14 +410,11 @@ text-align: left;
   height: 100%;
 }
 
-
 .chroniquesdeletrange .attributes .quantity,
 .chroniquesdeletrange .attributes .weight {
   width: 60px;
   text-align: center;
 }
-
-
 
 .chroniquesdeletrange .item-list {
   list-style: none;
@@ -591,14 +576,16 @@ text-align: left;
   flex: 0 0 116px;
   margin: 0 5px;
 }
+
+
+
+
 .chroniquesdeletrange.sheet.character {
   min-width: 920px; /* 560px; */
   max-width: 920px;
   min-height: 420px;
   max-height: 750px;
 }
-
-
 
 .chroniquesdeletrange.sheet.item,
 .chroniquesdeletrange.sheet.kungfu,
@@ -614,7 +601,6 @@ text-align: left;
 .chroniquesdeletrange.sheet.supernatural .sheet-body {
   overflow-y: auto;
 }
-
 
 
 /* concerne la fiche tinji-sheet */
@@ -659,6 +645,10 @@ text-align: left;
   flex: 0 0 100px;
 }
 
+.chroniquesdeletrange.sheet.actor.tinji .sheet-body {
+  overflow-y: auto;
+}
+
 .chroniquesdeletrange .sheet-body .tinji .tinji-value
 {
   width: 50px;
@@ -667,8 +657,6 @@ text-align: left;
   margin-top: -35px;
   margin-left:205px;
 }
-
-
 
 
 /* concerne la fiche loksyu-sheet */
@@ -708,6 +696,10 @@ text-align: left;
   max-width: 700px;
   min-height: 420px;
   max-height: 800px;
+}
+
+.chroniquesdeletrange.sheet.actor.loksyu .sheet-body {
+  overflow-y: auto;
 }
 
 .chroniquesdeletrange.sheet.actor.loksyu .sheet-header {
@@ -832,12 +824,15 @@ text-align: left;
   width: 3%;
   text-align: center;
 }
+
+
 .chroniquesdeletrange.sheet.actor.npc {
   min-width: 920px; /* 560px; */
   max-width: 920px;
   min-height: 420px;
   max-height: 750px;
 }
+
 
 .chroniquesdeletrange .sheet-body .aptitudes table tr td.image2 {
   margin-top: 0px;
