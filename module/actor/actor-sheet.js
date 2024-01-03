@@ -7,8 +7,8 @@ export class CDEActorSheet extends ActorSheet {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["chroniquesdeletrange", "sheet", "actor"],
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }],
-      width: 720,
-      height: 850,
+      width: 920,
+      height: 750
     });
   }
 
