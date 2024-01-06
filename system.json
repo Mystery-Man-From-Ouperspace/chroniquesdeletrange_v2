@@ -1,6 +1,6 @@
 {
   "id": "chroniquesdeletrange",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "title": "Les Chroniques de l'Étrange",
   "url": "https://github.com/Mystery-Man-From-Ouperspace/chroniquesdeletrange_v2",
   "description": "Unofficial game system for Les Chroniques de l'Étrange.",
@@ -66,5 +66,5 @@
   "primaryTokenAttribute": "threetreasures.heiyang",
   "secondaryTokenAttribute": "threetreasures.heiyin",
   "manifest": "https://chroniques-etrange-no.fr/download/foundry/system.json",
-  "download": "https://chroniques-etrange-no.fr/download/foundry/release-201.zip"
+  "download": "https://chroniques-etrange-no.fr/download/foundry/release-202.zip"
 }
