@@ -142,7 +142,7 @@
 }
 
 .chroniquesdeletrange .sheet-body img {
-border: 0px;
+border: 0;
 }
 
 
@@ -154,7 +154,7 @@ border: 0px;
 }
 
 .chroniquesdeletrange .sheet-body .skills image img {
-border: 0px;
+border: 0;
 z-index: 4;
 width: 100%;
 }
@@ -197,7 +197,7 @@ width: 3%;
 text-align: center;
 }
 .chroniquesdeletrange .sheet-body .skills table tr td.image input.input {
-border: 0px;
+border: 0;
 width: 30px;
 text-align: center;
 }
@@ -258,7 +258,7 @@ text-align: left;
   text-align: center;
 }
   .chroniquesdeletrange .sheet-body .magics .image input {
-  border: 0px;
+  border: 0;
   margin-top: -30px;
   text-align: center;
 }
@@ -280,12 +280,12 @@ text-align: left;
 }
   .chroniquesdeletrange .sheet-body .magics .icon-yang img {
   width: 40%;
-  margin-left: 0px;
+  margin-left: 0;
   margin-bottom: 2px;
 }
   .chroniquesdeletrange .sheet-body .magics .icon-yinyang img {
   width: 40%;
-  margin-left: 0px;
+  margin-left: 0;
   margin-bottom: 2px;
 }
   
@@ -310,7 +310,7 @@ text-align: left;
 .chroniquesdeletrange .sheet-body .nghang_wrap img {
     position: absolute;
     left: 0;
-    top: 0px;
+    top: 0;
     width: 100%;
     height: auto;
 }
@@ -623,7 +623,7 @@ text-align: left;
 .chroniquesdeletrange .sheet-body .tinji_wrap img {
     position: absolute;
     left: 0;
-    top: 0px;
+    top: 0;
     width: 100%;
     height: auto;
 }
@@ -679,7 +679,7 @@ text-align: left;
 .chroniquesdeletrange .sheet-body .loksyu_wrap img {
     position: absolute;
     left: 0;
-    top: 0px;
+    top: 0;
     width: 100%;
     height: auto;
 }
@@ -808,7 +808,7 @@ text-align: left;
 /* concerne la fiche npc-sheet */
 
 .chroniquesdeletrange .sheet-body .aptitudes table tr td.image input.input {
-  border: 0px;
+  border: 0;
 }
 .chroniquesdeletrange .sheet-body .aptitudes table tr td.image {
   width: 5%;
@@ -835,7 +835,7 @@ text-align: left;
 
 
 .chroniquesdeletrange .sheet-body .aptitudes table tr td.image2 {
-  margin-top: 0px;
+  margin-top: 0;
   width: 5%;
   text-align: center;
 }
@@ -882,7 +882,7 @@ text-align: left;
 }
 
 .chroniquesdeletrange .sheet-body .frame table tr {
-  border: 0px;
+  border: 0;
 }
 
 .chroniquesdeletrange .sheet-body .frame table tr:nth-child(odd) {
