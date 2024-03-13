@@ -894,6 +894,20 @@ text-align: left;
 }
 
 
+
+/*
+.image-popout .window-content {
+  box-shadow: 10px 10px 5px black;
+}
+
+#fullscreen-layer .background {
+  box-shadow: 10px 5px 5px black;
+}
+*/
+
+
+
+
 /* concerne l'interface de Foundry */
 
 #logo {
