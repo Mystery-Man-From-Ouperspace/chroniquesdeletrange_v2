@@ -7,6 +7,7 @@
       "concept": "",
       "guardian": "0",
       "initiative": 1,
+      "anti_initiative": 24,
       "description": "",
       "prefs": {
         "typeofthrow": {
@@ -334,6 +335,7 @@
       "levelofthreat": 0,
       "powerofnuisance": 0,
       "initiative": 1,
+      "anti_initiative": 24,
       "aptitudes": {
         "physical": {
           "value": 0,

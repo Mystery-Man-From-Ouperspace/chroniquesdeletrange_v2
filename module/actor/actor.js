@@ -22,9 +22,14 @@ export class CDEActor extends Actor {
   }
 
   prepareBaseData() {
+    if (this.type === "character") {
+      this.system.anti_initiative = 25 - this.system.initiative;
+    }
+
     if (this.type === "npc") {
       this.system.vitality.calcul = this.system.aptitudes.physical.value * 4;
       this.system.hei.calcul = this.system.aptitudes.spiritual.value * 4;
+      this.system.anti_initiative = 25 - this.system.initiative;
     }
   }
 }
