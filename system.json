@@ -1,6 +1,6 @@
 {
   "id": "chroniquesdeletrange",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "title": "Les Chroniques de l'Étrange (Unofficial)",
   "url": "https://chroniques-etrange-no.fr/blog/foundry-vtt/",
   "description": "Unofficial game system for Les Chroniques de l'Étrange.",
@@ -34,6 +34,18 @@
       "label": "Télécharger Compendiums",
       "system": "chroniquesdeletrange",
       "path": "packs/telecharger-compendiums",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "aide-pour-linitiative",
+      "label": "Aide pour l'initiative",
+      "system": "chroniquesdeletrange",
+      "path": "packs/aide-pour-linitiative",
       "type": "JournalEntry",
       "ownership": {
         "PLAYER": "OBSERVER",
@@ -81,5 +93,5 @@
   "primaryTokenAttribute": "threetreasures.heiyang",
   "secondaryTokenAttribute": "threetreasures.heiyin",
   "manifest": "https://chroniques-etrange-no.fr/download/foundry/system.json",
-  "download": "https://chroniques-etrange-no.fr/download/foundry/release-205.zip"
+  "download": "https://chroniques-etrange-no.fr/download/foundry/release-206.zip"
 }

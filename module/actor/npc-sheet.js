@@ -36,6 +36,14 @@ export class CDEPNJSheet extends CDEActorSheet {
   activateListeners(html) {
     super.activateListeners(html);
 
+
+
+    html.find(".click-initiative-npc").click(this._onClickNPCInitiative.bind(this));
+
+
+
+
+
     // Item Controls
     // html.find(".items .rollable").on("click", this._onSupernaturalRoll.bind(this));
   }
@@ -126,5 +134,104 @@ export class CDEPNJSheet extends CDEActorSheet {
       flavor: `<h2>${item.name}</h2><h3>${button.text()}</h3>`
     });
   } */
+
+  /**
+   * Listen for click on NPC Initiative.
+   * @param {MouseEvent} event    The originating left click event
+   */
+  async _onClickNPCInitiative (event) {
+    // Render modal dialog
+    const element = event.currentTarget;                        // On récupère le clic
+    const whatIsIt = element.dataset.libelId;
+    console.log("whatIsIt = ", whatIsIt);
+
+    console.log("on gère l'inititive d'un NPC !")
+
+    const myActor = this.actor;
+  
+    let initiative = myActor.system.initiative;
+
+    if (whatIsIt == "plus") {
+      initiative++;
+      if (initiative > 24) initiative = initiative - 24;
+      myActor.update({ "system.initiative": initiative });
+      return;
+    } else if (whatIsIt == "minus") {
+      initiative--;
+      if (initiative < 1) initiative = 24 - initiative;
+      myActor.update({ "system.initiative": initiative });
+      return;
+    }
+
+    if (whatIsIt != "create") return;
+
+    const template = 'systems/chroniquesdeletrange/templates/form/turn-order-npc-prompt.html';
+    const title = game.i18n.localize("CDE.TurnOrder");
+    let dialogOptions = "";
+    var dialogData = {
+      speciality: "0",
+    };
+    console.log("Gear dialogData = ", dialogData);
+    const html = await renderTemplate(template, dialogData);
+
+    // Create the Dialog window
+    let prompt = await new Promise((resolve) => {
+      new Dialog(
+        {
+          title: title,
+          content: html,
+          buttons: {
+            validateBtn: {
+              icon: `<div class="tooltip"><i class="fas fa-check"></i>&nbsp;<span class="tooltiptextleft">${game.i18n.localize('CDE.Validate')}</span></div>`,
+              callback: (html) => resolve( dialogData = _computeResult(dialogData, html) )
+            },
+            cancelBtn: {
+              icon: `<div class="tooltip"><i class="fas fa-cancel"></i>&nbsp;<span class="tooltiptextleft">${game.i18n.localize('CDE.Cancel')}</span></div>`,
+              callback: (html) => resolve(null)
+            }
+          },
+          default: 'validateBtn',
+          close: () => resolve(null)
+        },
+        dialogOptions
+      ).render(true, {
+        width: 550,
+        height: 125
+      });
+    });
+
+    if (prompt == null){return};
+    console.log('prompt : ', prompt);
+    const speciality = parseInt(dialogData.speciality);
+
+    const physical = myActor.system.aptitudes.physical.value;
+    let theOther;
+
+    switch (speciality) {
+      case 0: theOther = myActor.system.aptitudes.physical.value;
+      break;
+      case 1: theOther = myActor.system.aptitudes.martial.value;
+      break;
+      case 2: theOther = myActor.system.aptitudes.mental.value;
+      break;
+      case 3: theOther = myActor.system.aptitudes.social.value;
+      break;
+      case 4: theOther = myActor.system.aptitudes.spiritual.value;
+      break;
+      default: theOther = -999;                     
+    }
+
+    initiative = physical + theOther;
+    myActor.update({ "system.initiative": initiative });
+
+    function _computeResult(myDialogData, myHtml) {
+      console.log("J'exécute bien _computeResult()");
+      myDialogData.speciality = myHtml.find("select[name='speciality']").val();
+      return myDialogData;
+    };
+
+
+   }
+
 
 }

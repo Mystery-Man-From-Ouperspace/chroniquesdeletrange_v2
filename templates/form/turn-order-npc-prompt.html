@@ -1,0 +1,29 @@
+<form class="flexcol {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <div class="name">
+            <label><b>{{ localize "CDE.SkillPromptName" }}</b></label>
+        </div>
+    </header>
+	
+    {{!-- Sheet Body --}}
+    <section class="sheet-body" style="background-image: url('/systems/chroniquesdeletrange/images/cde_fond_transp.png')";
+    >
+
+        {{!-- Frame --}}
+        <div class="frame">
+            <div class="select">
+                <label><b>{{localize "CDE.InitiativeNPCSpeciality"}}</b></label>&nbsp;
+                <select name="speciality">
+                {{#select speciality }}
+                    <option value="0">{{ localize "CDE.Physical" }}</option>
+                    <option value="1">{{ localize "CDE.Martial" }}</option>
+                    <option value="2">{{ localize "CDE.Mental" }}</option>
+                    <option value="3">{{ localize "CDE.Social" }}</option>
+                    <option value="4">{{ localize "CDE.Spiritual" }}</option>
+                {{/select}}
+                </select>
+            </div>
+            <br>
+		</div>	
+    </section>
+</form>

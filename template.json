@@ -333,6 +333,7 @@
       "type": "",
       "levelofthreat": 0,
       "powerofnuisance": 0,
+      "initiative": 1,
       "aptitudes": {
         "physical": {
           "value": 0,

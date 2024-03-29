@@ -39,9 +39,10 @@ export class CDECharacterSheet extends CDEActorSheet {
     html.find(".click2").click(this._onClickDieRoll.bind(this));
     html.find(".click-prefs").click(this._onClickPrefs.bind(this));
     html.find(".click-initiative").click(this._onClickInitiative.bind(this));
+
   }
 
-  
+ 
   /**
    * Listen for click on Initiative.
    * @param {MouseEvent} event    The originating left click event
@@ -50,7 +51,7 @@ export class CDECharacterSheet extends CDEActorSheet {
     // Render modal dialog
 
     const element = event.currentTarget;                        // On récupère le clic
-    const whatIsIt = element.dataset.libelId;                   // Va récupérer 'attraction-AME-1' par exemple
+    const whatIsIt = element.dataset.libelId;
     console.log("whatIsIt = ", whatIsIt)
 
     const myActor = this.actor;
@@ -118,7 +119,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       break;
       case 1: theOther = myActor.system.skills.investigation.value;
       break;
-      case 2: theOther = myActor.system.skills.Erudition.value;
+      case 2: theOther = myActor.system.skills.erudition.value;
       break;
       case 3: theOther = myActor.system.skills.knavery.value;
       break;
