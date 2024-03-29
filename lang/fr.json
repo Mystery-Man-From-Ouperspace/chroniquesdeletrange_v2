@@ -313,6 +313,14 @@
 
   "CDE.MartialArts": "Arts Martiaux",
 
+  "CDE.Initiative": "Initiative",
+  "CDE.TurnOrder": "Détermination de votre initiative",
+  "CDE.InitiativeSpeciality": "Première action (Compétence) que vous escomptez effectuer",
+
+  "CDE.DeterminateInitiative": "Déterminer l'initiative : Prouesse + première action",
+  "CDE.PlusInitiative": "Plus Initiative",
+  "CDE.MinusInitiative": "Moins Initiative",
+
 
   "TYPES": {
     "Actor": {

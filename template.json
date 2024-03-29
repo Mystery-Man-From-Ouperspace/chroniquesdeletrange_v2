@@ -6,6 +6,7 @@
     "character": {
       "concept": "",
       "guardian": "0",
+      "initiative": 1,
       "description": "",
       "prefs": {
         "typeofthrow": {
@@ -419,7 +420,7 @@
 
   "Item": {
     "types": ["item", "kungfu", "spell", "supernatural"],
-    "htmlFields": ["description", "style", "technique", "components", "effects", "examples"],
+    "htmlFields": ["description", "style", "technique", "components", "effects", "notes", "examples"],
 
     "item": {
       "subtype": "",

@@ -1,0 +1,44 @@
+<form class="flexcol {{cssClass}}" autocomplete="off">
+    <header class="sheet-header">
+        <div class="name">
+            <label><b>{{ localize "CDE.SkillPromptName" }}</b></label>
+        </div>
+    </header>
+	
+    {{!-- Sheet Body --}}
+    <section class="sheet-body" style="background-image: url('/systems/chroniquesdeletrange/images/cde_fond_transp.png')";
+    >
+
+        {{!-- Frame --}}
+        <div class="frame">
+            <div class="select">
+                <label><b>{{localize "CDE.InitiativeSpeciality"}}</b></label>&nbsp;
+                <select name="speciality">
+                {{#select speciality }}
+                    <option value="0">{{ localize "CDE.Art" }}</option>
+                    <option value="1">{{ localize "CDE.Investigation" }}</option>
+                    <option value="2">{{ localize "CDE.Erudition" }}</option>
+                    <option value="3">{{ localize "CDE.Knavery" }}</option>
+                    <option value="4">{{ localize "CDE.Wordliness" }}</option>
+                    <option value="5">{{ localize "CDE.Prowess" }}</option>
+                    <option value="6">{{ localize "CDE.Sciences" }}</option>
+                    <option value="7">{{ localize "CDE.Technologies" }}</option>
+                    <option value="8">{{ localize "CDE.KungFu" }}</option>
+                    <option value="9">{{ localize "CDE.RangedCombat" }}</option>
+
+                    <option value="10">{{ localize "CDE.Supply" }}</option>
+                    <option value="11">{{ localize "CDE.Inquiry" }}</option>
+                    <option value="12">{{ localize "CDE.Influence" }}</option>
+
+                    <option value="13">{{ localize "CDE.InternalCinnabar" }}</option>
+                    <option value="14">{{ localize "CDE.Alchemy" }}</option>
+                    <option value="15">{{ localize "CDE.MasteryOfTheWay" }}</option>
+                    <option value="16">{{ localize "CDE.Exorcism" }}</option>
+                    <option value="17">{{ localize "CDE.Geomancy" }}</option>                           
+                {{/select}}
+                </select>
+            </div>
+            <br>
+		</div>	
+    </section>
+</form>

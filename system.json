@@ -1,6 +1,6 @@
 {
   "id": "chroniquesdeletrange",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "title": "Les Chroniques de l'Étrange (Unofficial)",
   "url": "https://chroniques-etrange-no.fr/blog/foundry-vtt/",
   "description": "Unofficial game system for Les Chroniques de l'Étrange.",
@@ -40,6 +40,18 @@
         "ASSISTANT": "OWNER"
       },
       "flags": {}
+    },
+    {
+      "name": "macros",
+      "label": "Macros",
+      "system": "chroniquesdeletrange",
+      "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "languages": [
@@ -69,5 +81,5 @@
   "primaryTokenAttribute": "threetreasures.heiyang",
   "secondaryTokenAttribute": "threetreasures.heiyin",
   "manifest": "https://chroniques-etrange-no.fr/download/foundry/system.json",
-  "download": "https://chroniques-etrange-no.fr/download/foundry/release-204.zip"
+  "download": "https://chroniques-etrange-no.fr/download/foundry/release-205.zip"
 }

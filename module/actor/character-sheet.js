@@ -38,6 +38,132 @@ export class CDECharacterSheet extends CDEActorSheet {
     html.find(".click").click(this._onClickDieRoll.bind(this));
     html.find(".click2").click(this._onClickDieRoll.bind(this));
     html.find(".click-prefs").click(this._onClickPrefs.bind(this));
+    html.find(".click-initiative").click(this._onClickInitiative.bind(this));
+  }
+
+  
+  /**
+   * Listen for click on Initiative.
+   * @param {MouseEvent} event    The originating left click event
+   */
+  async _onClickInitiative (event) {
+    // Render modal dialog
+
+    const element = event.currentTarget;                        // On récupère le clic
+    const whatIsIt = element.dataset.libelId;                   // Va récupérer 'attraction-AME-1' par exemple
+    console.log("whatIsIt = ", whatIsIt)
+
+    const myActor = this.actor;
+  
+    let initiative = myActor.system.initiative;
+
+    if (whatIsIt == "plus") {
+      initiative++;
+      if (initiative > 24) initiative = initiative - 24;
+      myActor.update({ "system.initiative": initiative });
+      return;
+    } else if (whatIsIt == "minus") {
+      initiative--;
+      if (initiative < 1) initiative = 24 - initiative;
+      myActor.update({ "system.initiative": initiative });
+      return;
+    }
+
+    if (whatIsIt != "create") return;
+
+    const template = 'systems/chroniquesdeletrange/templates/form/turn-order-prompt.html';
+    const title = game.i18n.localize("CDE.TurnOrder");
+    let dialogOptions = "";
+    var dialogData = {
+      speciality: "0",
+    };
+    console.log("Gear dialogData = ", dialogData);
+    const html = await renderTemplate(template, dialogData);
+
+    // Create the Dialog window
+    let prompt = await new Promise((resolve) => {
+      new Dialog(
+        {
+          title: title,
+          content: html,
+          buttons: {
+            validateBtn: {
+              icon: `<div class="tooltip"><i class="fas fa-check"></i>&nbsp;<span class="tooltiptextleft">${game.i18n.localize('CDE.Validate')}</span></div>`,
+              callback: (html) => resolve( dialogData = _computeResult(dialogData, html) )
+            },
+            cancelBtn: {
+              icon: `<div class="tooltip"><i class="fas fa-cancel"></i>&nbsp;<span class="tooltiptextleft">${game.i18n.localize('CDE.Cancel')}</span></div>`,
+              callback: (html) => resolve(null)
+            }
+          },
+          default: 'validateBtn',
+          close: () => resolve(null)
+        },
+        dialogOptions
+      ).render(true, {
+        width: 550,
+        height: 125
+      });
+    });
+
+    if (prompt == null){return};
+    console.log('prompt : ', prompt);
+    const speciality = parseInt(dialogData.speciality);
+
+    const prowess = myActor.system.skills.prowess.value;
+    let theOther;
+
+    switch (speciality) {
+      case 0: theOther = myActor.system.skills.art.value;
+      break;
+      case 1: theOther = myActor.system.skills.investigation.value;
+      break;
+      case 2: theOther = myActor.system.skills.Erudition.value;
+      break;
+      case 3: theOther = myActor.system.skills.knavery.value;
+      break;
+      case 4: theOther = myActor.system.skills.wordliness.value;
+      break;
+      case 5: theOther = myActor.system.skills.prowess.value;
+      break;
+      case 6: theOther = myActor.system.skills.sciences.value;
+      break;
+      case 7: theOther = myActor.system.skills.technologies.value;
+      break;
+      case 8: theOther = myActor.system.skills.kungfu.value;
+      break;
+      case 9: theOther = myActor.system.skills.rangedcombat.value;
+      break;
+
+      case 10: theOther = myActor.system.resources.supply.value;
+      break;
+      case 11: theOther = myActor.system.resources.inquiry.value;
+      break;
+      case 12: theOther = myActor.system.resources.influence.value;
+      break;
+
+      case 13: theOther = myActor.system.magics.internalcinnabar.value;
+      break;
+      case 14: theOther = myActor.system.magics.alchemy.value;
+      break;
+      case 15: theOther = myActor.system.magics.masteryofthway.value;
+      break;
+      case 16: theOther = myActor.system.magics.exorcism.value;
+      break;
+      case 17: theOther = myActor.system.magics.geomancy.value;
+      break;
+      default: theOther = -999;                     
+    }
+
+    initiative = prowess + theOther;
+    myActor.update({ "system.initiative": initiative });
+
+    function _computeResult(myDialogData, myHtml) {
+      console.log("J'exécute bien _computeResult()");
+      myDialogData.speciality = myHtml.find("select[name='speciality']").val();
+      return myDialogData;
+    };
+
   }
 
   /**

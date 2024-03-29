@@ -66,8 +66,21 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 /**
  * Init hook.
  */
+
+
+
 Hooks.once("init", async function () {
   console.log(`CHRONIQUESDELETRANGE System | Initializing`);
+
+     /**
+	 * Set an initiative formula for the system
+	 * @type {String}
+	 */
+     CONFIG.Combat.initiative = {
+      formula: "@initiative",
+      decimals: 0
+    };
+  
 
   game.system.CONST = CDE;
 
