@@ -90,6 +90,7 @@
   "background": "/systems/chroniquesdeletrange/images/background/accueil.jpg",
   "gridDistance": 5,
   "gridUnits": "m",
+  "initiative": "@anti_initiative",
   "primaryTokenAttribute": "threetreasures.heiyang",
   "secondaryTokenAttribute": "threetreasures.heiyin",
   "manifest": "https://chroniques-etrange-no.fr/download/foundry/system.json",
