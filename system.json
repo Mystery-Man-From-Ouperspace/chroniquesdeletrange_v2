@@ -88,8 +88,10 @@
     "verified": "12"
   },
   "background": "/systems/chroniquesdeletrange/images/background/accueil.jpg",
-  "grid.distance": 5,
-  "grid.units": "m",
+  "grid": {
+    "distance": 5,
+    "units": "m"
+  },
   "initiative": "@anti_initiative",
   "primaryTokenAttribute": "threetreasures.heiyang",
   "secondaryTokenAttribute": "threetreasures.heiyin",
