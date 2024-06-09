@@ -1,6 +1,6 @@
 {
   "id": "chroniquesdeletrange",
-  "version": "2.0.8",
+  "version": "2.1.0",
   "title": "Les Chroniques de l'Étrange (Unofficial)",
   "url": "https://chroniques-etrange-no.fr/blog/foundry-vtt/",
   "description": "Unofficial game system for Les Chroniques de l'Étrange.",
@@ -84,9 +84,17 @@
     }
   ],
   "compatibility": {
-    "minimum": "11",
+    "minimum": "12",
     "verified": "12"
   },
+  "requires": [{
+    "id": "lib-wrapper",
+    "type": "module",
+    "manifest": "https://github.com/ruipin/fvtt-lib-wrapper/releases/download/v1.12.13.1/module.json",
+    "compatibility": {
+      "minimum": "1.12.13.1"
+    }
+  }],
   "background": "/systems/chroniquesdeletrange/images/background/accueil.jpg",
   "grid": {
     "distance": 5,
@@ -96,5 +104,5 @@
   "primaryTokenAttribute": "threetreasures.heiyang",
   "secondaryTokenAttribute": "threetreasures.heiyin",
   "manifest": "https://chroniques-etrange-no.fr/download/foundry/system.json",
-  "download": "https://chroniques-etrange-no.fr/download/foundry/release-208.zip"
+  "download": "https://chroniques-etrange-no.fr/download/foundry/release-210.zip"
 }

@@ -69,6 +69,20 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 
 
 
+
+// Added by MMFO
+Hooks.once('ready', () => {
+  if(!game.modules.get('lib-wrapper')?.active && game.user.isGM) {
+      ui.notifications.error("System chroniquesdeletrange requires the 'libWrapper' module. Please install and activate it.");
+  } else {
+    // Reverse Init Order / Added by MMFO
+    libWrapper.register('chroniquesdeletrange', 'Combat.prototype._sortCombatants', wrappedSortCombatants);
+  }
+});
+
+
+
+
 Hooks.once("init", async function () {
   console.log(`CHRONIQUESDELETRANGE System | Initializing`);
 
@@ -102,8 +116,27 @@ Hooks.once("init", async function () {
   // Modify Runtime configuration settings / Added by MMFO
   await modifyConfigurationSettings();
 
+
   console.log(`CHRONIQUESDELETRANGE System | Initialized`);
 });
+
+
+
+
+// Sort from low to high / Added by MMFO
+async function wrappedSortCombatants(wrapped, a, b) {
+  const ia = Number.isNumeric(a.initiative) ? a.initiative : Infinity;
+  const ib = Number.isNumeric(b.initiative) ? b.initiative : Infinity;
+  const ci = ia - ib;
+  if (ci !== 0) return ci;
+  let [an, bn] = [a.token.name || "", b.token.name || ""];
+  let cn = an.localeCompare(bn);
+  if (cn !== 0) return cn;
+  return a.tokenId - b.tokenId;
+}
+
+
+
 
 async function modifyConfigurationSettings() {
   /**
