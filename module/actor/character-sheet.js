@@ -287,7 +287,7 @@ export class CDECharacterSheet extends CDEActorSheet {
     var mySpecialUsed = special2BDefined;
 
     var skillUsedLabel = "?";
-    var aspectUsedLabel ="?";
+    var aspectUsedLabel = "?";
     var mySpecialUsedLabel = "?";
 
     var bonusDice = 0;

@@ -113,10 +113,13 @@ Hooks.once("init", async function () {
   await modifyConfigurationSettings();
 
 
-  console.log(`CHRONIQUESDELETRANGE System | Initialized`);
 
   // Reverse Init Order / Added by MMFO
   libWrapper.register('chroniquesdeletrange', 'Combat.prototype._sortCombatants', wrappedSortCombatants);
+
+
+
+  console.log(`CHRONIQUESDELETRANGE System | Initialized`);
   
 });
 
