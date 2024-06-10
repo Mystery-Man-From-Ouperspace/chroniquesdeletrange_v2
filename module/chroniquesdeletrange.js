@@ -72,14 +72,14 @@ Hooks.once("diceSoNiceReady", (dice3d) => {
 
 // Added by MMFO
 Hooks.once('ready', () => {
-  if(!game.modules.get('lib-wrapper')?.active && game.user.isGM) {
+  if(!game.modules.get('lib-wrapper')?.active && game.user.isGM)
       ui.notifications.error("System chroniquesdeletrange requires the 'libWrapper' module. Please install and activate it.");
-  } else {
-    // Reverse Init Order / Added by MMFO
-    libWrapper.register('chroniquesdeletrange', 'Combat.prototype._sortCombatants', wrappedSortCombatants);
-  }
 });
 
+Hooks.on('Combat.prototype._sortCombatants', () => {
+  // Reverse Init Order / Added by MMFO
+  libWrapper.register('chroniquesdeletrange', 'Combat.prototype._sortCombatants', wrappedSortCombatants);
+});
 
 
 
@@ -124,7 +124,7 @@ Hooks.once("init", async function () {
 
 
 // Sort from low to high / Added by MMFO
-async function wrappedSortCombatants(wrapped, a, b) {
+function wrappedSortCombatants(wrapped, a, b) {
   const ia = Number.isNumeric(a.initiative) ? a.initiative : Infinity;
   const ib = Number.isNumeric(b.initiative) ? b.initiative : Infinity;
   const ci = ia - ib;
