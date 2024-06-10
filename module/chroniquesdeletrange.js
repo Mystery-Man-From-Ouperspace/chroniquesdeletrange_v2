@@ -76,10 +76,6 @@ Hooks.once('ready', () => {
       ui.notifications.error("System chroniquesdeletrange requires the 'libWrapper' module. Please install and activate it.");
 });
 
-Hooks.on('Combat.prototype._sortCombatants', () => {
-  // Reverse Init Order / Added by MMFO
-  libWrapper.register('chroniquesdeletrange', 'Combat.prototype._sortCombatants', wrappedSortCombatants);
-});
 
 
 
@@ -118,6 +114,10 @@ Hooks.once("init", async function () {
 
 
   console.log(`CHRONIQUESDELETRANGE System | Initialized`);
+
+  // Reverse Init Order / Added by MMFO
+  libWrapper.register('chroniquesdeletrange', 'Combat.prototype._sortCombatants', wrappedSortCombatants);
+  
 });
 
 
