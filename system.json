@@ -54,6 +54,18 @@
       "flags": {}
     },
     {
+      "name": "aide-pour-la-lumiere",
+      "label": "Aide pour la lumière",
+      "system": "chroniquesdeletrange",
+      "path": "packs/aide-pour-la-lumiere",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
       "name": "macros",
       "label": "Macros",
       "system": "chroniquesdeletrange",
