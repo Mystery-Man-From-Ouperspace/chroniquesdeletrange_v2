@@ -957,4 +957,6 @@ text-align: left;
 .journal-entry-page h6 {
   font-family: "DeliusUnicase";
   color:hsla(41, 88%, 44%, 0.874);
+  border-bottom: 0px;
+  border-top: 1px solid hsla(41, 88%, 44%, 0.874);
 }
