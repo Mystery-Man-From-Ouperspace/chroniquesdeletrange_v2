@@ -159,6 +159,7 @@ border: 0;
 }
 
 
+
 /* concerne les compétences */
 
 .chroniquesdeletrange .sheet-body .tab.skills .tab-titre{
@@ -923,6 +924,11 @@ text-align: left;
 
 /* concerne l'interface de Foundry */
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DeliusUnicase";
+}
+
+
 #logo {
   content: url("/systems/chroniquesdeletrange/images/logo_jeu.png");
   width: 70px;
@@ -950,21 +956,25 @@ text-align: left;
 
 /* concerne les pages de journaux */
 
+.journal-header input {
+  font-family: "DeliusUnicase";
+}
+
 .journal-entry-page h1 {
   font-family: "DeliusUnicase";
   text-align: center;
-  text-transform: uppercase;
   color:hsla(249, 66%, 58%, 0.874);
-  border-bottom: 1px solid hsla(41, 77%, 51%, 0.874);
-  border-top: 1px solid hsla(41, 77%, 51%, 0.874);
+  border-bottom: 1px solid orange;
+  border-top: 1px solid orange;
+  border-top: 1px solid orange;
+
 }
 
 .journal-entry-page h2 {
   font-family: "DeliusUnicase";
-  text-transform: uppercase;
-  color:hsla(41, 77%, 51%, 0.874);
+  color:orange;
   border-bottom: 0px;
-  border-top: 1px solid hsla(41, 77%, 51%, 0.874);
+  border-top: 1px solid orange;
 }
 
 .journal-entry-page h3,
@@ -972,7 +982,6 @@ text-align: left;
 .journal-entry-page h5,
 .journal-entry-page h6 {
   font-family: "DeliusUnicase";
-  text-transform: uppercase;
   color:hsla(249, 66%, 58%, 0.874);
   border-bottom: 0px;
 }
