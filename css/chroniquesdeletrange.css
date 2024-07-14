@@ -948,15 +948,31 @@ text-align: left;
 }
 
 
-.journal-header input,
-.journal-entry-page h1,
-.journal-entry-page h2,
+/* concerne les pages de journaux */
+
+.journal-entry-page h1 {
+  font-family: "DeliusUnicase";
+  text-align: center;
+  text-transform: uppercase;
+  color:hsla(249, 66%, 58%, 0.874);
+  border-bottom: 1px solid hsla(41, 77%, 51%, 0.874);
+  border-top: 1px solid hsla(41, 77%, 51%, 0.874);
+}
+
+.journal-entry-page h2 {
+  font-family: "DeliusUnicase";
+  text-transform: uppercase;
+  color:hsla(41, 77%, 51%, 0.874);
+  border-bottom: 0px;
+  border-top: 1px solid hsla(41, 77%, 51%, 0.874);
+}
+
 .journal-entry-page h3,
 .journal-entry-page h4,
 .journal-entry-page h5,
 .journal-entry-page h6 {
   font-family: "DeliusUnicase";
-  color:hsla(41, 88%, 44%, 0.874);
+  text-transform: uppercase;
+  color:hsla(249, 66%, 58%, 0.874);
   border-bottom: 0px;
-  border-top: 1px solid hsla(41, 88%, 44%, 0.874);
 }
