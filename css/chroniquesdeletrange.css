@@ -932,6 +932,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "DeliusUnicase";
 }
 
+.chroniquesdeletrange .editor-content h1,
+.chroniquesdeletrange .editor-content h2,
+.chroniquesdeletrange .editor-content h3,
+.chroniquesdeletrange .editor-content h4,
+.chroniquesdeletrange .editor-content h5,
+.chroniquesdeletrange .editor-content h6 {
+  font-family: "DeliusUnicaseBold";
+}
+
 
 #logo {
   content: url("/systems/chroniquesdeletrange/images/logo_jeu.png");
