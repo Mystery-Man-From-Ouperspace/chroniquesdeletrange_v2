@@ -4,8 +4,12 @@
  ---------------------------------------------*/
 
  @font-face {
-  font-family: "DeliusUnicase";
+  font-family: "DeliusUnicaseBold";
   src: url(../fonts/DeliusUnicase-Bold.otf);
+}
+@font-face {
+  font-family: "DeliusUnicase";
+  src: url(../fonts/DeliusUnicase-Regular.otf);
 }
 
 
@@ -957,11 +961,11 @@ h1, h2, h3, h4, h5, h6 {
 /* concerne les pages de journaux */
 
 .journal-header input {
-  font-family: "DeliusUnicase";
+  font-family: "DeliusUnicaseBold";
 }
 
 .journal-entry-page h1 {
-  font-family: "DeliusUnicase";
+  font-family: "DeliusUnicaseBold";
   text-align: center;
   color:hsla(249, 66%, 58%, 0.874);
   border-bottom: 1px solid orange;
@@ -971,7 +975,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .journal-entry-page h2 {
-  font-family: "DeliusUnicase";
+  font-family: "DeliusUnicaseBold";
   color:orange;
   border-bottom: 0px;
   border-top: 1px solid orange;
@@ -981,7 +985,7 @@ h1, h2, h3, h4, h5, h6 {
 .journal-entry-page h4,
 .journal-entry-page h5,
 .journal-entry-page h6 {
-  font-family: "DeliusUnicase";
+  font-family: "DeliusUnicaseNold";
   color:hsla(249, 66%, 58%, 0.874);
   border-bottom: 0px;
 }
