@@ -970,7 +970,7 @@ h1, h2, h3, h4, h5, h6 {
 /* concerne les pages de journaux */
 
 .journal-header input {
-  font-family: "DeliusUnicaseBold";
+  font-family: "DeliusUnicase";
 }
 
 .journal-entry-page h1 {
