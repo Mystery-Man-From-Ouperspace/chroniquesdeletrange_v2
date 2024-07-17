@@ -994,7 +994,7 @@ h1, h2, h3, h4, h5, h6 {
 .journal-entry-page h4,
 .journal-entry-page h5,
 .journal-entry-page h6 {
-  font-family: "DeliusUnicaseNold";
+  font-family: "DeliusUnicaseBold";
   color:hsla(249, 66%, 58%, 0.874);
   border-bottom: 0px;
 }
