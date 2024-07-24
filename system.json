@@ -66,10 +66,34 @@
       "flags": {}
     },
     {
+      "name": "aide-pour-fxmaster",
+      "label": "Aide pour FXMaster",
+      "system": "chroniquesdeletrange",
+      "path": "packs/aide-pour-fxmaster",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
       "name": "macros",
       "label": "Macros",
       "system": "chroniquesdeletrange",
       "path": "packs/macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fxmastercde",
+      "label": "FR - FXMaster/CdE",
+      "system": "chroniquesdeletrange",
+      "path": "packs/fxmastercde",
       "type": "Macro",
       "ownership": {
         "PLAYER": "OBSERVER",

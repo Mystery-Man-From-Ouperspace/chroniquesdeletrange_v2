@@ -944,9 +944,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #logo {
   content: url("/systems/chroniquesdeletrange/images/logo_jeu.png");
-  width: 70px;
-  height: 70px;
-  margin-left: 22px;
+  width: 100px;
+  height: 100px;
+  margin-left: 7px;
   margin-top: -2px;
 }
 
