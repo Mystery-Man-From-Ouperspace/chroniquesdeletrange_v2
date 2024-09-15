@@ -317,7 +317,7 @@
   "CDE.InitiativeNPCSpeciality": "Primera acción (Aptitud) que planea realizar",
 
   "CDE.DeterminateInitiative": "Determinar la iniciativa: Hazaña + primera acción",
-  "CDE.DeterminateNPCInitiative": "Determinar la iniciativa: Aptitud física + primera acción.",
+  "CDE.DeterminateNPCInitiative": "Determinar la iniciativa: Aptitud física + primera acción",
   "CDE.PlusInitiative": "Más iniciativa",
   "CDE.MinusInitiative": "Menos iniciativa",
 
