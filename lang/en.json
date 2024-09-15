@@ -312,14 +312,14 @@
   "CDE.MartialArts": "Martial Arts",
 
   "CDE.Initiative": "Initiative",
-  "CDE.TurnOrder": "Détermination de votre initiative",
-  "CDE.InitiativeSpeciality": "Première action (Compétence) que vous escomptez effectuer",
-  "CDE.InitiativeNPCSpeciality": "Première action (Aptitude) que vous escomptez effectuer",
+  "CDE.TurnOrder": "Determining your Initiative",
+  "CDE.InitiativeSpeciality": "First action (Skill) you plan to perform",
+  "CDE.InitiativeNPCSpeciality": "First action (Aptitude) you plan to perform",
 
-  "CDE.DeterminateInitiative": "Déterminer l'initiative : Prouesse + première action",
-  "CDE.DeterminateNPCInitiative": "Déterminer l'initiative : Aptitude physique + première action",
-  "CDE.PlusInitiative": "Plus Initiative",
-  "CDE.MinusInitiative": "Moins Initiative",
+  "CDE.DeterminateInitiative": "Determine Initiative: Prowess + first action",
+  "CDE.DeterminateNPCInitiative": "Determine Initiative: Physical Aptitude + first action",
+  "CDE.PlusInitiative": "More Initiative",
+  "CDE.MinusInitiative": "Less Initiative",
 
 
   "TYPES": {
