@@ -10,7 +10,7 @@ export class CDEPNJSheet extends CDEActorSheet {
       classes: ["chroniquesdeletrange", "sheet", "actor", "npc"],
       template: "systems/chroniquesdeletrange/templates/actor/npc-sheet.html",
       scrollY: [".description", ".aptitudes", ".supernaturals", ".spells", ".kungfus", ".items"],
-      dragDrop: [{dragSelector: ".item-list .item .spell .kungfu .supernatural", dropSelector: null}]
+      dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
     });
   }
 

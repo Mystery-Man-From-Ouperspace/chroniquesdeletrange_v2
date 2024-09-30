@@ -12,7 +12,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       template: "systems/chroniquesdeletrange/templates/actor/character-sheet.html",
       tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}],
       scrollY: [".biography", ".items", ".attributes", ".spells", ".kungfus"],
-      dragDrop: [{dragSelector: ".item-list .item .spell .kungfu", dropSelector: null}]
+      dragDrop: [{dragSelector: ".item-list .item", dropSelector: null}]
     });
   }
 
