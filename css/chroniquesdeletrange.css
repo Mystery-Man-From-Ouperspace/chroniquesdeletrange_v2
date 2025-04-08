@@ -3,13 +3,14 @@
         Fonts
  ---------------------------------------------*/
 
- @font-face {
+@font-face {
   font-family: "DeliusUnicaseBold";
-  src: url(../fonts/DeliusUnicase-Bold.otf);
+  src: url(../fonts/DeliusUnicase-Bold.ttf);
 }
+
 @font-face {
   font-family: "DeliusUnicase";
-  src: url(../fonts/DeliusUnicase-Regular.otf);
+  src: url(../fonts/DeliusUnicase-Regular.ttf);
 }
 
 
@@ -18,6 +19,8 @@
   /* Items List */
   /* Attributes */
 }
+
+
 .chroniquesdeletrange .window-content {
   height: 100%;
   padding: 5px;

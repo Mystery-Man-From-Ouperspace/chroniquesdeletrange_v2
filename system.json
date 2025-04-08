@@ -16,6 +16,32 @@
   ],
   "esmodules": ["module/chroniquesdeletrange.js"],
   "styles": ["css/chroniquesdeletrange.css"],
+  "packFolders": [
+    {
+      "name": "FR - Aides",
+      "sorting": "a",
+      "color": "",
+      "packs": [
+        "aides-pour-les-joueuses",
+        "telecharger-compendiums",
+        "aide-pour-linitiative",
+        "aide-pour-la-lumiere",
+        "aide-pour-fxmaster"
+      ],
+      "folders": []
+    },
+    {
+      "name": "FR - Macros & Générateurs",
+      "sorting": "a",
+      "color": "",
+      "packs": [
+        "macros",
+        "fxmastercde",
+        "cantonese-name-generators"
+      ],
+      "folders": []
+    }
+  ],
   "packs": [
     {
       "name": "aides-pour-les-joueuses",
