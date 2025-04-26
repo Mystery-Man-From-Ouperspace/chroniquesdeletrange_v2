@@ -197,6 +197,35 @@ async function modifyConfigurationSettings() {
   CONFIG.Scene.compendiumBanner = "/systems/chroniquesdeletrange/images/banners/scene-banner.webp";
 }
 
+Hooks.on("renderSidebarTab", (app, html) => {
+  let content = `
+<h2>Lien vers Compendium&nbsp;<i class="fa fa-up-right-from-square"></i></h2>
+<a  target="_blank" href="https://antre-monde.com/les-chroniques-de-letrengae/">
+<button>
+<i class="fa fa-download"></i>&nbsp;Compendium Chroniques de l'étrange
+</button>
+</a>
+<details>
+<summary>Guide d'installation</summary>
+<small style="text-align: center;">
+<p>
+Rendez-vous sur le site de l'éditeur d'origine du jeu, qui vous fournit gracieusement les compendium, et téléchargez sur votre ordinateur 2 pdf contenant un lien vers un module.
+</p>
+<p>
+Ouvrez ces pdf dans un visualisateur de pdf, copiez le lien fourni puis collez-le dans Foundry VTT > Modules > Installer un module > URL du manifeste.
+</p>
+<p>
+Validez le lien.
+</p>
+<p>
+Renouvelez l'opération avec le second lien. N'oubliez pas pour finir d'activer ces 2 modules dans votre monde.
+</p>
+</small>
+</details>
+`
+  html.find("#settings-game").append(content);
+})
+
 Hooks.once("i18nInit", function () {
   // Prélocalisation des objets de configuration
   preLocalizeConfig();
