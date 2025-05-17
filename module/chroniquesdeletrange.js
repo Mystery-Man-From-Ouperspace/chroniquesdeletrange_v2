@@ -197,9 +197,10 @@ async function modifyConfigurationSettings() {
   CONFIG.Scene.compendiumBanner = "/systems/chroniquesdeletrange/images/banners/scene-banner.webp";
 }
 
+// Foundry VTT v12
 Hooks.on("renderSidebarTab", (app, html) => {
   let content = `
-<h2>Lien vers Compendium&nbsp;<i class="fa fa-up-right-from-square"></i></h2>
+<h2>Lien vers Compendium&nbsp;<i class="fa-light fa-up-right-from-square"></i></h2>
 <a  target="_blank" href="https://antre-monde.com/les-chroniques-de-letrengae/">
 <button>
 <i class="fa fa-download"></i>&nbsp;Compendium Chroniques de l'étrange
@@ -225,6 +226,71 @@ Renouvelez l'opération avec le second lien. N'oubliez pas pour finir d'activer 
 `
   html.find("#settings-game").append(content);
 })
+
+// Foundry VTT v13
+Hooks.on("renderSettings", (app, html) => {
+
+  console.log("Sidebar mise à jour");
+
+  // On prend le premier <h4 class="divider">
+  const gameSettingsHeader = html.querySelector("h4.divider");
+
+  if (!gameSettingsHeader) {
+    console.log("No header <h4.divider> found in parameters");
+    return;
+  }
+
+  // Création de la section personnalisée
+  const section = document.createElement("section");
+  section.classList.add("settings", "flexcol");
+
+  section.innerHTML = `
+<section class="links flexcol">
+<h4 class="divider">&nbsp;`+"Lien utile"+`&nbsp;<i class="fa-light fa-up-right-from-square"></i>&nbsp;</h4>
+`
+  // Définition premier bouton
+  const linkSection = document.createElement("section");
+  linkSection.classList.add("settings", "flexcol");
+  const button = document.createElement("button");
+  button.type = "button";
+  button.innerHTML = `
+<i class="fa fa-download"></i>&nbsp;Compendium pour Les CdE&nbsp;<i class="fa-light fa-up-right-from-square"></i>&nbsp;`;
+  button.addEventListener("click", ev => {
+    ev.preventDefault();
+    window.open("https://antre-monde.com/les-chroniques-de-letrengae/", "_blank");
+  });
+  linkSection.appendChild(button);
+  section.appendChild(linkSection);
+
+  // Définition Speech
+  const textSection = document.createElement("section");
+  textSection.classList.add("settings", "flexcol");
+  const details = document.createElement("details");
+  details.innerHTML = `
+<summary><small>Guide d'installation</small></summary>
+<small style="text-align: center;">
+<p>
+Rendez-vous sur le site de l'éditeur d'origine du jeu, qui vous fournit gracieusement les compendium, et téléchargez sur votre ordinateur 2 pdf contenant un lien vers un module.
+</p>
+<p>
+Ouvrez ces pdf dans un visualisateur de pdf, copiez le lien fourni puis collez-le dans Foundry VTT > Modules > Installer un module > URL du manifeste.
+</p>
+<p>
+Validez le lien.
+</p>
+<p>
+Renouvelez l'opération avec le second lien. N'oubliez pas pour finir d'activer ces 2 modules dans votre monde.
+</p>
+</small>
+`
+  textSection.appendChild(details);
+  section.appendChild(textSection);
+
+  // Insère la section avant le premier header
+  gameSettingsHeader.parentNode.insertBefore(section, gameSettingsHeader);
+
+});
+
 
 Hooks.once("i18nInit", function () {
   // Prélocalisation des objets de configuration
