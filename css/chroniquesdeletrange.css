@@ -961,6 +961,13 @@ h1, h2, h3, h4, h5, h6 {
   left: calc(50% - 96px);
 }
 
+a.compendium-name,
+a.entry-name,
+strong.ellipsis {
+  font-family: "DeliusUnicase";
+}
+
+
 
 /* concerne les préférences */
 
