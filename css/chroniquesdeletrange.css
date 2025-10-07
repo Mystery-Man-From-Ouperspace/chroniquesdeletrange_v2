@@ -935,6 +935,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "DeliusUnicase";
 }
 
+section.sidebar-tab h1.title {
+  letter-spacing: -3.5px;
+}
+section.sidebar-tab h4.divider {
+  font-size: 18px;
+  letter-spacing: -2px;
+}
+
 .chroniquesdeletrange .editor-content h1,
 .chroniquesdeletrange .editor-content h2,
 .chroniquesdeletrange .editor-content h3,
