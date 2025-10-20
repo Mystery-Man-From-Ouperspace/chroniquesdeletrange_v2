@@ -103,7 +103,8 @@ export class CDECharacterSheet extends CDEActorSheet {
         dialogOptions
       ).render(true, {
         width: 550,
-        height: 125
+        // height: 125
+        height: "auto"
       });
     });
 
@@ -205,7 +206,8 @@ export class CDECharacterSheet extends CDEActorSheet {
         dialogOptions
       ).render(true, {
         width: 520,
-        height: 150
+        // height: 150
+        height: "auto"
       });
     });
     async function _computeResult(myActor, myHtml) {
@@ -1217,7 +1219,8 @@ export class CDECharacterSheet extends CDEActorSheet {
         dialogOptions
       ).render(true, {
         width: 520,
-        height: 180
+        // height: 180
+        height: "auto"
       });
     });
 
@@ -1279,7 +1282,8 @@ async function _skillDiceRollDialog(myActor, template, myTitle, myDialogOptions,
     dialogOptions
     ).render(true, {
       width: 520,
-      height: 375
+      // height: 375
+      height: "auto"
     });
   });
 
@@ -1339,7 +1343,8 @@ async function _skillSpecialDiceRollDialog(myActor, template, myTitle, myDialogO
     dialogOptions
     ).render(true, {
       width: 520,
-      height: 375
+      // height: 375
+      height: "auto"
     });
   });
 
@@ -1403,7 +1408,8 @@ async function _magicDiceRollDialog(myActor, template, myTitle, myDialogOptions,
       dialogOptions
     ).render(true, {
       width: 520,
-      height: 530
+      // height: 530
+      height: "auto"
     });
   });
 

@@ -196,7 +196,8 @@ export class CDEPNJSheet extends CDEActorSheet {
         dialogOptions
       ).render(true, {
         width: 550,
-        height: 125
+        // height: 125
+        height: "auto"
       });
     });
 
