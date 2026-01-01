@@ -246,6 +246,7 @@ Hooks.on("renderSettings", (app, html) => {
 
   section.innerHTML = `
 <section class="links flexcol">
+<img class="logo-info" src="systems/chroniquesdeletrange/images/logo_jeu.png"></img>
 <h4 class="divider">&nbsp;`+"Lien utile"+`&nbsp;<i class="fa-light fa-up-right-from-square"></i>&nbsp;</h4>
 `
   // Définition premier bouton
