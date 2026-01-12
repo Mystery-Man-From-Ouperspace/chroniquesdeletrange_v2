@@ -1,6 +1,8 @@
 import { CDEActor } from "./actor/actor.js";
 import { CDEItem } from "./item/item.js";
 
+import { CDEMessage } from "./chat-message.js";
+
 import { CDECharacterSheet } from "./actor/character-sheet.js";
 import { CDEPNJSheet } from "./actor/npc-sheet.js";
 import { CDETinJiSheet } from "./actor/tinji-sheet.js";
@@ -13,6 +15,7 @@ import { CDESupernaturalSheet } from "./item/supernatural-sheet.js";
 import { CDE } from "./config.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 import { registerHandlebarsHelpers } from "./helpers.js";
+
 /**
  * Adds custom dice to Dice So Nice!.
  */
@@ -89,6 +92,9 @@ Hooks.once("init", async function () {
   // Define custom Document classes
   CONFIG.Actor.documentClass = CDEActor;
   CONFIG.Item.documentClass = CDEItem;
+
+  CONFIG.ChatMessage.documentClass = CDEMessage;
+
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);

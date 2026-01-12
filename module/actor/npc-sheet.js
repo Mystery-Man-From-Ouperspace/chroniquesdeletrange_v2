@@ -101,6 +101,7 @@ export class CDEPNJSheet extends CDEActorSheet {
     const item = this.actor.items.get(li.data("itemId"));
     let r = new Roll(button.data('roll'), this.actor.getRollData());
     return r.toMessage({
+      // alias: game.user.avatar,
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: `<h2>${item.name}</h2><h3>${button.text()}</h3>`
@@ -116,6 +117,7 @@ export class CDEPNJSheet extends CDEActorSheet {
     const item = this.actor.items.get(li.data("itemId"));
     let r = new Roll(button.data('roll'), this.actor.getRollData());
     return r.toMessage({
+      // alias: game.user.avatar,
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: `<h2>${item.name}</h2><h3>${button.text()}</h3>`
@@ -129,6 +131,7 @@ export class CDEPNJSheet extends CDEActorSheet {
     const item = this.actor.items.get(li.data("itemId"));
     let r = new Roll(button.data('roll'), this.actor.getRollData());
     return r.toMessage({
+      // alias: game.user.avatar,
       user: game.user.id,
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: `<h2>${item.name}</h2><h3>${button.text()}</h3>`

@@ -1,5 +1,4 @@
 {
-
   "CDE.ItemCreate": "Créer un Équipement",
   "CDE.ItemEdit": "Éditer l′Équipement",
   "CDE.ItemDelete": "Supprimer l′Équipement",
@@ -26,7 +25,6 @@
   "CDE.Range": "Portée",
 
   "CDE.Masterized": "Vous maîtrisez cette Technique",
-
 
   "CDE.Create": "Créer",
   "CDE.New": "Nouveau",

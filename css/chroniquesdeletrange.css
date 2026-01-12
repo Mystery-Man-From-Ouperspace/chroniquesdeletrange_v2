@@ -1022,3 +1022,14 @@ strong.ellipsis {
   color:hsla(249, 66%, 58%, 0.874);
   border-bottom: 0px;
 }
+
+/* concerne le Tchat */
+
+#interface .chat-message .message-header img {
+  max-width: 80px;
+  border-radius: 3px;
+  border: 0.5px solid black;
+  /* max-width: 50px; */
+  /* max-height: 50px; */
+  margin-right: 4px;
+}

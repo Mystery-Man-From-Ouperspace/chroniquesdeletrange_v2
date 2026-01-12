@@ -326,6 +326,9 @@ export class CDECharacterSheet extends CDEActorSheet {
     };
 
 
+    console.log("game.user", game.user);
+
+
     const element = event.currentTarget;              // On récupère le clic
     const whatIsIt = element.dataset.libelId;         // Va récupérer 'fire-aspect' par exemple
     console.log("whatIsIt = "+whatIsIt)
@@ -955,24 +958,28 @@ export class CDECharacterSheet extends CDEActorSheet {
     var msg;
     switch ( typeOfThrow ) {
       case 0: msg = await rModif.toMessage({
+        // alias: game.user.avatar,
         user: game.user.id,
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         rollMode: 'roll'                      // Public Roll
         });
       break;
       case 1: msg = await rModif.toMessage({
+        // alias: game.user.avatar,
         user: game.user.id,
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         rollMode: 'gmroll'                    // Private Roll
         });
       break;
       case 2: msg = await rModif.toMessage({
+        // alias: game.user.avatar,
         user: game.user.id,
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         rollMode: 'blindroll'                 // Blind GM Roll
       });As
       break;
       case 3: msg = await rModif.toMessage({
+        // alias: game.user.avatar,
         user: game.user.id,
         speaker: ChatMessage.getSpeaker({ actor: this.actor }),
         rollMode: 'selfroll'                      // Self Roll
@@ -1064,6 +1071,7 @@ export class CDECharacterSheet extends CDEActorSheet {
     switch ( typeOfThrow ) {
       case 0:
         ChatMessage.create({
+          // alias: game.user.avatar,
           user: game.user.id,
           // speaker: ChatMessage.getSpeaker({ token: this.actor }),
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1074,6 +1082,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       break;
       case 1:
         ChatMessage.create({
+          // alias: game.user.avatar,
           user: game.user.id,
           // speaker: ChatMessage.getSpeaker({ token: this.actor }),
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1084,6 +1093,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       break;
       case 2:
         ChatMessage.create({
+          // alias: game.user.avatar,
           user: game.user.id,
           // speaker: ChatMessage.getSpeaker({ token: this.actor }),
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1094,6 +1104,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       break;
       case 3:
         ChatMessage.create({
+          // alias: game.user.avatar,
           user: game.user.id,
           // speaker: ChatMessage.getSpeaker({ token: this.actor }),
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1110,6 +1121,7 @@ export class CDECharacterSheet extends CDEActorSheet {
     switch ( typeOfThrow ) {
       case 0:
         ChatMessage.create({
+          // alias: game.user.avatar,
           user: game.user.id,
           // speaker: ChatMessage.getSpeaker({ token: this.actor }),
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1118,6 +1130,7 @@ export class CDECharacterSheet extends CDEActorSheet {
         });
         if (myTypeUsed == wiiMagicSpecial) {
           return ChatMessage.create({
+            // alias: game.user.avatar,
             user: game.user.id,
             // speaker: ChatMessage.getSpeaker({ token: this.actor }),
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1128,6 +1141,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       break;
       case 1:
         ChatMessage.create({
+          // alias: game.user.avatar,
           user: game.user.id,
           // speaker: ChatMessage.getSpeaker({ token: this.actor }),
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1136,6 +1150,7 @@ export class CDECharacterSheet extends CDEActorSheet {
         });
         if (myTypeUsed == wiiMagicSpecial) {
           return ChatMessage.create({
+            // alias: game.user.avatar,
             user: game.user.id,
             // speaker: ChatMessage.getSpeaker({ token: this.actor }),
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1146,6 +1161,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       break;
       case 2:
         ChatMessage.create({
+          // alias: game.user.avatar,
           user: game.user.id,
           // speaker: ChatMessage.getSpeaker({ token: this.actor }),
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1154,6 +1170,7 @@ export class CDECharacterSheet extends CDEActorSheet {
         });
         if (myTypeUsed == wiiMagicSpecial) {
           return ChatMessage.create({
+            // alias: game.user.avatar,
             user: game.user.id,
             // speaker: ChatMessage.getSpeaker({ token: this.actor }),
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1163,6 +1180,7 @@ export class CDECharacterSheet extends CDEActorSheet {
       break;
       case 3:
         ChatMessage.create({
+          // alias: game.user.avatar,
           user: game.user.id,
           // speaker: ChatMessage.getSpeaker({ token: this.actor }),
           speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1171,6 +1189,7 @@ export class CDECharacterSheet extends CDEActorSheet {
         });
         if (myTypeUsed == wiiMagicSpecial) {
           return ChatMessage.create({
+            // alias: game.user.avatar,
             user: game.user.id,
             // speaker: ChatMessage.getSpeaker({ token: this.actor }),
             speaker: ChatMessage.getSpeaker({ actor: this.actor }),
