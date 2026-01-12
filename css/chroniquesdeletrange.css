@@ -1027,7 +1027,7 @@ strong.ellipsis {
 
 #interface .chat-message .message-header img {
   max-width: 80px;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 0.5px solid black;
   /* max-width: 50px; */
   /* max-height: 50px; */

@@ -16,12 +16,36 @@ import { CDE } from "./config.js";
 import { preloadHandlebarsTemplates } from "./templates.js";
 import { registerHandlebarsHelpers } from "./helpers.js";
 
-/**
+
+ /**
  * Adds custom dice to Dice So Nice!.
  */
 Hooks.once("diceSoNiceReady", (dice3d) => {
-  //Called once the module is ready to listen to new rolls and display 3D animations.
-  //dice3d: Main class, instantiated and ready to use.
+  // Called once the module is ready to listen to new rolls and display 3D animations.
+  // dice3d: Main class, instantiated and ready to use.
+
+  /**
+   * Add a colorset (theme)
+   * @param {Object} colorset (see below)
+   * @param {string} mode= "default","preferred"
+   * The "mode" parameter have 2 modes :
+   * - "default" only register the colorset
+   * - "preferred" apply the colorset if the player didn't already change his dice appearance for this world.
+   */
+  dice3d.addColorset(
+    {
+      name: "cde",
+      description: "CdE",
+      foreground: "#000000",
+      background: "#ffffff",
+      edge: "#ffffff",
+      font: "DeliusUnicase",
+      texture: "ice",
+      material: "plastic",
+    },
+    "preferred",
+  )
+
 
   dice3d.addSystem({ id: "chroniquesdeletrangedigit", name: "Chroniques de l'étrange digits" }, "preferred");
   dice3d.addDicePreset({
