@@ -1,6 +1,6 @@
 {
   "id": "chroniquesdeletrange",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "title": "Les Chroniques de l'Étrange (Unofficial)",
   "url": "https://chroniques-etrange-no.fr/blog/foundry-vtt/",
   "description": "Unofficial game system for Les Chroniques de l'Étrange.",
@@ -180,5 +180,5 @@
   "primaryTokenAttribute": "threetreasures.heiyang",
   "secondaryTokenAttribute": "threetreasures.heiyin",
   "manifest": "https://chroniques-etrange-no.fr/download/foundry/system.json",
-  "download": "https://chroniques-etrange-no.fr/download/foundry/release-230.zip"
+  "download": "https://chroniques-etrange-no.fr/download/foundry/release-231.zip"
 }
