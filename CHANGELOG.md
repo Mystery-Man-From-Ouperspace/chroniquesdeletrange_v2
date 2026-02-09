@@ -1,3 +1,6 @@
+2.3.3
+- Image monastère titre sans accentuations
+
 2.3.2
 - Correction CSS sur fiche de créature
 
